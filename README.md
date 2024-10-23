@@ -88,6 +88,13 @@ export KERAS_BACKEND=jax
 # Use useful-moonshine[jax-cuda] for jax on GPU
 ```
 
+#### Fork note
+
+One can directly activate the associated conda environment:
+```
+conda activate moonshine 
+```
+
 ### 3. Try it out
 
 You can test Moonshine by transcribing the provided example audio file with the `.transcribe` function:
@@ -97,6 +104,11 @@ python
 >>> import moonshine
 >>> moonshine.transcribe(moonshine.ASSETS_DIR / 'beckett.wav', 'moonshine/tiny')
 ['Ever tried ever failed, no matter try again, fail again, fail better.']
+```
+
+Alternatively, one can run:
+```
+./wavdemo.sh
 ```
 
 The first argument is a path to an audio file and the second is the name of a Moonshine model. `moonshine/tiny` and `moonshine/base` are the currently available models.
